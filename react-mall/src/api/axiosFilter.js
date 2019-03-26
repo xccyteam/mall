@@ -27,3 +27,6 @@ axios.interceptors.response.use((res) => {
     console.log("返回错误：" + error.message);
     return Promise.reject(error);
 });
+
+
+export default axios
