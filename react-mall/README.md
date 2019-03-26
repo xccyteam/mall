@@ -30,6 +30,7 @@
 │   ├── components             // 全局公用组件
 │   ├── images                 // 图片文件
 │   ├── less                   // 全局样式
+│   ├── route                  // 路由
 │   ├── test                   // 单元测试文件
 │   ├── utils                  // 全局公用方法
 │   ├── views                  // views
