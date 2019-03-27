@@ -6,8 +6,6 @@ import '../../mock/test.js';
 export function test() {
     return fetch({
         url: url.test,
-        method: 'post',
-        // dataType: "json",
-        // contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        method:'get'
     })
 }

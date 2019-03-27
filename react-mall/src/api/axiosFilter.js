@@ -2,7 +2,7 @@ import axios from 'axios';
 import Promise from 'es6-promise';
 Promise.polyfill();
 
-axios.create({
+const service = axios.create({
     timeout: 300000,// 请求超时时间
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -10,7 +10,7 @@ axios.create({
 })
 
 //请求体
-axios.interceptors.request.use((config) => {
+service.interceptors.request.use((config) => {
     return config;
 }, (error) => {
     console.log('请求参数错误');
@@ -18,8 +18,8 @@ axios.interceptors.request.use((config) => {
 });
 
 // 返回状态判断
-axios.interceptors.response.use((res) => {
-    if (res.data.code === 200) {
+service.interceptors.response.use((res) => {
+    if (res.status === 200) {
         return res;
     }
     return Promise.reject(res);
@@ -29,4 +29,4 @@ axios.interceptors.response.use((res) => {
 });
 
 
-export default axios
+export default service
