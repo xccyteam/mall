@@ -38,3 +38,30 @@
 ├── .gitignore                 // git 忽略项
 └── package.json               // package.json
 ```
+
+## 提交注释
+
+    只有3中   ADD，MOD, DEL
+
+    ADD：添加
+
+    MOD：修改
+
+    DEL：删除
+
+## 技术栈
+
+### JavaScript
+
+基础教程：http://www.w3school.com.cn/js/
+
+高级教程：http://www.w3school.com.cn/js/index_pro.asp
+
+ES6: http://es6.ruanyifeng.com/
+
+### react-mock 
+https://www.npmjs.com/package/react-mock
+
+### less
+http://lesscss.cn/
+https://less.bootcss.com/

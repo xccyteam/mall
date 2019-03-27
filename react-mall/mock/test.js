@@ -13,4 +13,5 @@ const requestHandler = (request, generator) => {
 }
  
 Server.mockGet(endPoint, requestHandler)
+//Server.mockPost(endPoint, requestHandler) 
 Server.on()
