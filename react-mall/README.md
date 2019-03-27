@@ -20,6 +20,7 @@
 ```
 ├── build                      // 构建相关  
 ├── config                     // 配置相关
+├── mock                       // mock相关
 ├── scripts                    
 ├── public                     
 │   ├── favicon.ico            // favicon图标
@@ -30,9 +31,10 @@
 │   ├── components             // 全局公用组件
 │   ├── images                 // 图片文件
 │   ├── less                   // 全局样式
-│   ├── route                  // 路由
+│   ├── redux                  // redux 状态管理
+│   ├── route                  // 路由文件
 │   ├── test                   // 单元测试文件
-│   ├── utils                  // 全局公用方法
+│   ├── utils                  // 工具类
 │   ├── views                  // views
 │   └── App.js                 // 入口页面
 ├── .gitignore                 // git 忽略项
