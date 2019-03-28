@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import Test from '../../components/test.js';
+import  Counter from '../../components/counter.js';
 import {test} from '../../api/api';
 import './index.less';
 
-class App extends Component {
+class Home extends Component {
   constructor(props){
     super();
     this.state = {
@@ -26,10 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Test></Test>
-        <p>
-          hello world
-        </p>
+        <Counter />
         <Link to="/personal">去个人中心页面</Link>
         <ul>  
             {  
@@ -43,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;

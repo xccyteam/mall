@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Router from './route';
 // react-hot-loader 不会刷新整个页面，它只替换了修改的代码，做到了页面的局部刷新
 import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
 import './less/reset.less';
 import './less/method.less';
 import * as serviceWorker from './serviceWorker';
@@ -10,9 +12,11 @@ import * as serviceWorker from './serviceWorker';
 // ReactDOM.render(<App />, document.getElementById('root'));
 const render = Component => {
     ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
+        <Provider store={store}>
+            <AppContainer>
+                <Component />
+            </AppContainer>
+        </Provider>,
         document.getElementById('root')
     )
 }
