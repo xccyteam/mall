@@ -39,6 +39,7 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+//原因: 新增less配置
 const lessRegex = /\.less$/;
 const lessModuleRegex = /\.module\.less$/;
 
@@ -278,7 +279,7 @@ module.exports = function(webpackEnv) {
         // please link the files into your node_modules/ and let module-resolution kick in.
         // Make sure your source files are compiled, as they will not be processed in any way.
         
-        // 注释原因https://blog.csdn.net/u010682792/article/details/80234899
+        //原因:https://blog.csdn.net/u010682792/article/details/80234899
         //new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
       ],
     },
@@ -450,6 +451,7 @@ module.exports = function(webpackEnv) {
                 'sass-loader'
               ),
             },
+            //原因:新增less相关
             {
               test: lessRegex,
               exclude: lessModuleRegex,

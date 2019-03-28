@@ -3,6 +3,11 @@
 - node.js环境（npm包管理器） >=8.10.0
 - create-react-app 脚手架构建工具
 - cnpm  npm的淘宝镜像
+- > npm install -g create-react-app
+- > create-react-app demo
+- > 提交代码后，npm run eject，显示webpack，配置相关依赖
+- > react-mock配置mock数据，修改react层次
+
 
 ## 开发运行
 ```
@@ -50,6 +55,8 @@
     MOD：修改
 
     DEL：删除
+
+    修改配置文件时，注释格式："//原因+"说明""
 
 ## 技术栈
 
