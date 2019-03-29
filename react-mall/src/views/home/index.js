@@ -13,6 +13,7 @@ class Home extends Component {
   }
   getUserInfo(){
     test().then(res => {
+      console.log(res)
       if(res.status === 200){
         this.setState({students: res.data });
       }
@@ -29,11 +30,7 @@ class Home extends Component {
         <Counter />
         <Link to="/personal">去个人中心页面</Link>
         <ul>  
-            {  
-                this.state.students.map(function(item, index){  
-                    return <li key={index}>{item.author}</li>  
-                })  
-            }  
+            <li></li>
         </ul>
       </div>
     );

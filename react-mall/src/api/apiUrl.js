@@ -1,10 +1,10 @@
 var baseURL = '';
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3000';
+  baseURL = 'http://localhost:3100';
 } else {
-  baseURL = '';
+  baseURL = 'http://localhost:3100';
 }
 const apiUrl = {
-  test: baseURL + '/api/userinfo/',
+  test: baseURL + '/api/userinfo',
 }
 export default apiUrl
