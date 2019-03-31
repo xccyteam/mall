@@ -19,15 +19,8 @@ var jsonWrite = function(res, ret) {
         });
     }
 };
-router.get('/api/userinfo', function(req, res, next) {
-    var sql = $sql.index.checkUser;
-    var params = req.body;
-    pool.query(sql, [params.user_name, params.user_pwd], function(error, results, fields) {
-        if (error) throw error;
-        if (results) {
-            jsonWrite(res, results);
-        }
-    })
+router.get('', function(req, res, next) {
+    
 });
 
 

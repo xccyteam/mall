@@ -3,9 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+//原因:新增相关接口
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var searchRouter = require('./routes/search');
+var cartRouter = require('./routes/cart');
+var userRouter = require('./routes/user');
 
 var app = express();
 
@@ -19,6 +21,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter);
+app.use('/search', searchRouter);
+app.use('/cart', cartRouter);
+app.use('/user', userRouter);
+
+//原因:处理跨域请求
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
@@ -27,10 +35,6 @@ app.all('*', function (req, res, next) {
   res.header('Content-Type', 'application/json;charset=utf-8');
   next();
 });
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

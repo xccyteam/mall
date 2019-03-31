@@ -10,7 +10,8 @@
 - cd api-demo
 - npm init
 - npm install express --save        安装express本地依赖
-- express -e    
+- express -e   
+- npm install mysql 安装数据库相关，建表，连接接数据库 
 
 
 ## 开发运行
@@ -25,8 +26,21 @@
 
 ## 目录结构
 ```
-// 待完善
-
+├── bin                        // 构建相关  
+├── routes 					   
+│   ├── index.js               // 登录和首页的接口配置
+│ 	├── search.js              // 搜索和全部商品接口配置
+│   ├── cart.js                // 购物车接口相关配置
+│   ├── user.js                // 个人中心相关接口配置   
+│	├── code.js                // 状态码设置              
+├── sql                     
+│   ├── db.js            	   // 数据库配置
+│   ├── sqlMap.js              // 数据库语句
+├── views                        
+│   ├── error.ejs              // 构建相关暂无用
+│   └── index.ejs              // 构建相关暂无用
+├── app.js                     // 入口和构建相关配置
+└── package.json               // package.json
 ```
 
 ## 提交注释

@@ -7,9 +7,9 @@
 ### 搭建过程
 - > npm install -g create-react-app
 - > create-react-app demo
-- > 提交代码后，npm run eject，显示webpack，配置相关依赖
-- > react-mock配置mock数据，修改react层次
-
+- > 提交代码后，npm run eject，显示webpack，配置相关less依赖
+- > react-mock配置mock数据(有问题暂不使用)，修改react层次
+- > 请求express相关接口数据
 
 ## 开发运行
 ```
