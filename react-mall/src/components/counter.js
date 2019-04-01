@@ -1,36 +1,29 @@
-import React from 'react'
-import {increment, decrement} from '../redux/actions'
-import {connect} from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { increment, decrement } from '../redux/actions'
 
-const btnStyle = {
-  margin: '10px'
-}
-
-function Counter({value, onIncrement, onDecrement}) {
-  return (
-    <div>
-      <button style={btnStyle} onClick={onIncrement}>+</button>
-      <button style={btnStyle} onClick={onDecrement}>-</button>
-      <span>times：{value}</span>
-    </div>
-  )
-}
-
-function mapStateToProps(state, ownProps) {
-  return {
-    value: state.counter
-  }
-}
-
-function mapDispatchToProps(dispatch, ownProps) {
-  return {
-    onIncrement() {
-      dispatch(increment())
-    },
-    onDecrement() {
-      dispatch(decrement())
+class Counter extends Component {
+    onIncrease() {
+        this.props.increment(5);
     }
-  }
+    onDecrement() {
+        this.props.decrement(3);
+    }
+    render() {
+        const { value } = this.props;
+        return (
+            <div>
+                Test: 测试{value}
+                <button onClick={this.onIncrease.bind(this)}>增加1</button>
+                <button onClick={this.onDecrement.bind(this)}>减少1</button>
+            </div>
+        );
+    }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default connect(state => ({
+    value: state.test
+}), {
+    increment,
+    decrement
+})(Counter);

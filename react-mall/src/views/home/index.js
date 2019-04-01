@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import  Counter from '../../components/counter.js';
+import { Link } from 'react-router-dom';
+import Counter from '../../components/Counter.js';
 import {test} from '../../api/api';
 import './index.less';
 

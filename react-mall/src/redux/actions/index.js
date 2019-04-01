@@ -1,11 +1,13 @@
 import * as types from './actionsTypes'
-export const increment = ()=> {
+export const increment = (num)=> {
     return {
-        type: types.INCREMENT
+        type: types.INCREMENT,
+        num
     }
 };
-export const decrement = ()=> {
+export const decrement = (num)=> {
     return {
-        type: types.DECREMENT
+        type: types.DECREMENT,
+        num
     }
 };
