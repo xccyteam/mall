@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import Home from '../views/home/index.js';
 import Personal from '../views/personal/index.js';
-// import Welcome from '../views/welcome/welcome';
 
 export default class RouteConfig extends Component {
   render () {
