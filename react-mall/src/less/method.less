@@ -1,5 +1,13 @@
-/***less公共的方法***/
+/***less公共的变量***/
+@color: #d0021b;
+@secColor: #4a4a4a;
+@white: #ffffff;
+@black: #000000;
+@backgroundColor: #f3f3f3; // 底色
+@underlineColor: #9b9b9b; // 下划线
+@otherColor: #f5a623; // 辅助色
 
+/***less公共的方法***/
 
 /***rem转换方法****/
 
@@ -7,107 +15,109 @@
   @{name}: @px / 75 * 1rem;
 }
 
-.px2px(@name, @px){
+.px2px(@name, @px) {
   @{name}: round(@px / 2) * 1px;
   [data-dpr="2"] & {
-      @{name}: @px * 1px;
+    @{name}: @px * 1px;
   }
   // for mx3
   [data-dpr="2.5"] & {
-      @{name}: round(@px * 2.5 / 2) * 1px;
+    @{name}: round(@px * 2.5 / 2) * 1px;
   }
   // for 小米note
   [data-dpr="2.75"] & {
-      @{name}: round(@px * 2.75 / 2) * 1px;
+    @{name}: round(@px * 2.75 / 2) * 1px;
   }
   [data-dpr="3"] & {
-      @{name}: round(@px * 3 / 2 ) * 1px
+    @{name}: round(@px * 3 / 2) * 1px;
   }
   // for 三星note4
   [data-dpr="4"] & {
-      @{name}: @px * 2px;
+    @{name}: @px * 2px;
   }
 }
 
-.color(@color){
-  color:@color;
+.color(@color) {
+  color: @color;
 }
-.color(@color,@hovercolor){
-  color:@color;
-  &:hover { color:@hovercolor;}
+.color(@color,@hovercolor) {
+  color: @color;
+  &:hover {
+    color: @hovercolor;
+  }
 }
 //居中定位·绝对定位方式（未定义/不确定尺寸时,不兼容IE6）
-.ct(){
-  position:absolute;
-  margin:auto;
-  left:0;
-  top:0;
-  right:0;
-  bottom:0;
+.ct() {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.ct(x){
-  position:absolute;
-  margin-left:auto;
-  margin-right:auto;
-  left:0;
-  right:0;
+.ct(x) {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
-.ct(y){
-  position:absolute;
-  margin-top:auto;
-  margin-bottom:auto;
-  top:0;
-  bottom:0;
+.ct(y) {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
 }
 
 .backgroundSize(@x, @y) {
   // @{name}: round(@y / 2) * 1px;
   [data-dpr="1"] & {
-      background-size: (@x/2)*1px (@y/2)*1px;
+    background-size: (@x / 2) * 1px (@y / 2) * 1px;
   }
   [data-dpr="2"] & {
-      background-size: @x*1px @y*1px;
+    background-size: @x*1px @y*1px;
   }
   // for mx3
   [data-dpr="2.5"] & {
-      background-size: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
+    background-size: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
   }
   // for 小米note
   [data-dpr="2.75"] & {
-      background-size: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
+    background-size: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
   }
   [data-dpr="3"] & {
-      background-size: round(@x * 3 / 2) * 1px round(@y * 3 / 2) * 1px;
+    background-size: round(@x * 3 / 2) * 1px round(@y * 3 / 2) * 1px;
   }
   // for 三星note4
   [data-dpr="4"] & {
-      background-size: @x * 2px @y * 2px;
+    background-size: @x * 2px @y * 2px;
   }
 }
 
 .backgroundPosition (@x, @y) {
   [data-dpr="1"] & {
-      background-position: (@x/2)*1px (@y/2)*1px;
+    background-position: (@x / 2) * 1px (@y / 2) * 1px;
   }
   [data-dpr="2"] & {
-      background-position: @x*1px @y*1px;
+    background-position: @x*1px @y*1px;
   }
   // for mx3
   [data-dpr="2.5"] & {
-      background-position: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
+    background-position: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
   }
   // for 小米note
   [data-dpr="2.75"] & {
-      background-position: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
+    background-position: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
   }
   [data-dpr="3"] & {
-      background-position: round(@x * 3 / 2) * 1px round(@y * 3 / 2) * 1px;
+    background-position: round(@x * 3 / 2) * 1px round(@y * 3 / 2) * 1px;
   }
   // for 三星note4
   [data-dpr="4"] & {
-      background-position: @x * 2px @y * 2px;
+    background-position: @x * 2px @y * 2px;
   }
 }
 
@@ -115,8 +125,8 @@
 .hasfixed() {
   html,
   body {
-      _background-image: url(about:blank);
-      _background-attachment: fixed;
+    _background-image: url(about:blank);
+    _background-attachment: fixed;
   }
 }
 
@@ -175,39 +185,39 @@
 .placeholder(@color) {
   /**placeholder 颜色***/
   :-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
-      color: @color;
+    /* Mozilla Firefox 4 to 18 */
+    color: @color;
   }
   ::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: @color;
+    /* Mozilla Firefox 19+ */
+    color: @color;
   }
   input:-ms-input-placeholder {
-      color: @color;
+    color: @color;
   }
   input::-webkit-input-placeholder {
-      color: @color;
+    color: @color;
   }
 }
 
-.fl() { 
-  float:left; 
-  *display:inline;
+.fl() {
+  float: left;
+  *display: inline;
 } //ie6-7双倍margin bug处理
-.fr() { 
-  float:right; 
-  *display:inline;
+.fr() {
+  float: right;
+  *display: inline;
 }
 
 .clearfix() {
   *zoom: 1;
   &:before,
   &:after {
-      content: "";
-      display: table;
+    content: "";
+    display: table;
   }
   &:after {
-      clear: both;
+    clear: both;
   }
 }
 
@@ -238,3 +248,7 @@
   position: static;
   margin: 0;
 } // 复位
+
+.db() {
+  display: block;
+}

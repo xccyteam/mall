@@ -11,3 +11,16 @@ export const decrement = (num)=> {
         num
     }
 };
+
+export const setToken = (token) => {
+    return {
+        type: types.SETTOKEN,
+        token
+    }
+}
+
+export const delToken = () => {
+    return {
+        type: types.DELTOKEN
+    }
+}

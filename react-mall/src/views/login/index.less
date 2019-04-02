@@ -1,0 +1,29 @@
+@import "../../less/method.less";
+.login-wrap {
+  height: 100vh;
+  box-sizing: border-box;
+  background: rgba(216, 216, 216, 0.3);
+  text-align: center;
+  .px2px(font-size, 32);
+  overflow: hidden;
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    .db();
+    .px2rem(height, 80);
+    .px2rem(margin-top, 16);
+    .px2rem(padding-right, 40);
+    .px2rem(padding-left, 40);
+  }
+  a {
+    .db();
+    .px2rem(width, 672);
+    .px2rem(line-height, 88);
+    color: @white;
+    margin: 0 auto;
+    background: @color !important;
+    .px2rem(border-radius, 4);
+    .px2rem(margin-top, 96);
+  }
+}

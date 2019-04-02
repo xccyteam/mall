@@ -1,5 +1,5 @@
 const defaultState = 0;
-export default function counter(state = defaultState, action) {
+export default function test(state = defaultState, action) {
     switch (action.type) {
         case 'INCREMENT':
             return state + action.num;

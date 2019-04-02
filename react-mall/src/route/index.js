@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { createBrowserHistory  } from "history"
 import { connect } from 'react-redux';
-import Routes from './routeMap'
+import Routes from './routeMap';
+
+const history = createBrowserHistory()
 
 @connect(
   state => ({ token: state.token }),
@@ -11,7 +14,7 @@ class RouteConfig extends Component {
   render() {
     const { token } = this.props;
     return (
-      <Router>
+      <Router history={history}>
         <Switch>
           {Routes.map((item, index) => {
             return <Route key={index} path={item.path} exact render={props =>
