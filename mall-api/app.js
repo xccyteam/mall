@@ -1,10 +1,23 @@
+// 原因： 引入全局文件
+require('./config/global.js');
+require('./config/response-code');
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// 原因: 引入跨域插件
+const cors = require('cors');
 
 var app = express();
+
+// 原因: 设置跨域
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    alloweHeaders: ['Conten-Type', 'Authorization']
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
