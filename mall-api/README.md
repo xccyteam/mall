@@ -11,7 +11,8 @@
 - npm init
 - npm install express --save        安装express本地依赖
 - express -e   
-- npm install mysql 安装数据库相关，建表，连接接数据库 
+- npm install mysql 安装数据库相关，建表，连接接数据库
+- 增加token https://www.cnblogs.com/hlere/p/6668159.html?utm_source=itdadao&utm_medium=referral 
 
 
 ## 开发运行
