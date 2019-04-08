@@ -6,5 +6,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 const apiUrl = {
   test: baseURL + '/api/userinfo',
+  token: baseURL + '/users/token',
 }
 export default apiUrl

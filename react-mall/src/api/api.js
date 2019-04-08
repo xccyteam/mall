@@ -9,3 +9,11 @@ export function test() {
         method:'get'
     })
 }
+
+export function token(obj){
+    return fetch({
+        url: url.token,
+        method: 'post',
+        data: obj
+    })
+}

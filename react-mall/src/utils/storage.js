@@ -1,10 +1,10 @@
 /** 
- * 操作localStorage
+ * 操作sessionStorage
  */
-export const setItem = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+export const setItem = (key, value) => sessionStorage.setItem(key, JSON.stringify(value));
 export const getItem = (key) => {
-    if (localStorage.key) {
-        return JSON.parse(localStorage.getItem(key))
+    if (sessionStorage.key) {
+        return JSON.parse(sessionStorage.getItem(key))
     }
 };
-export const removeItem = (key) => localStorage.removeItem(key)
+export const removeItem = (key) => sessionStorage.removeItem(key)

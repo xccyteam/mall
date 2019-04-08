@@ -1,17 +1,22 @@
 import axios from 'axios';
+import { getItem } from '../utils/storage'
 import Promise from 'es6-promise';
 Promise.polyfill();
 
 const service = axios.create({
     timeout: 300000,// 请求超时时间
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
     }
 })
 
 //请求体
-service.interceptors.request.use((config) => {
-    return config;
+service.interceptors.request.use((request) => {
+    let config = request.headers;
+    let token = getItem('auth-token');
+    config.Authorization =  token ? token : null ; 
+    request.headers = config
+    return request;
 }, (error) => {
     console.log('请求参数错误');
     return Promise.reject(error);
